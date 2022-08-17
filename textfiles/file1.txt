@@ -1,0 +1,21 @@
+----------------------------------
+Customer Name: sarah
+Customer Email: sarah@email.com
+Customer Phone Number: 01234789789
+----------------------------------
+----------------------------------
+Customer Name: tom
+Customer Email: tom@email.com
+Customer Phone Number: 01234789789
+----------------------------------
+----------------------------------
+Customer Name: peter
+Customer Email: peter@email.com
+Customer Phone Number: 01234789789
+----------------------------------
+----------------------------------
+Customer Name: john
+Customer Email: john@email.com
+Customer Phone Number: 01234789789
+----------------------------------
+

@@ -108,12 +108,25 @@
             ## Conditions ##
             ################
 
+##def devMoney():
+##    devs_money = 100
+##    dev_can_play_smash = False
+##
+##    if devs_money > 10 and dev_can_play_smash:
+##        print("Dev enters a smash tournemnet")
+##    elif devs_money < 10 and dev_can_play_smash:
+##        print("Dev is too poor to enter")
+##    else:
+##        print("Dev just cant play smash")
+##
+##devMoney()
+
 ##def Conditions():
 ##    mark = int(input("Please enter a number: "))
 ##    print("--- Elif Version ---")
 ##    if mark >= 65 and mark < 85 :
 ##        print("Pass")
-##    elif mark > 85:
+##    elif mark >= 85:
 ##        print("Distiction")
 ##    else:
 ##        print("Fail")
@@ -129,7 +142,17 @@
 ##    
 ##Conditions()
 
-#### Iteration
+        ###############
+        ## Iteration ##
+        ###############
+
+##def favFilms():
+##    fav_films = ["Stargate", "Star Wars", "Highlander", "Shaun Of the Dead", "Paul"]
+##
+##    for films in fav_films:
+##        print(films.upper())
+##
+##favFilms()
 
 ##def WhileLoop():
 ##    number = 0 ## python couts 0 as 1
@@ -228,6 +251,81 @@
 
 
 
+###### test functions #####
+
+##  this dose not work ##
+##
+##def TestFunc(testName):
+##
+##    def funcOne():
+##        return f"this is func one {testName}"
+##    
+##
+##
+##    def funcTwo():
+##        return "this is func two"
+##    return funcTwo(), funcOne()
+
+
+##
+##test = TestFunc()
+##test.funcTwo()
+
+####print(TestFunc().funcOne())
+##
+##print(TestFunc("Testing 123"))
+##
+
+
+#################################################
+#################################################
+#                                               #
+#                   DAY 3                       #
+#                                               #
+#               self learning                   #
+#                                               #
+#################################################
+#################################################
+
+
+##def TextFile():
+##    lines =['Hello World', 'This is a test']
+##    with open('textfiles/file1.txt', 'w') as f: ## open(file, mode) file specifies the path to text file, mode specifies the mode you wish to perfom. 
+##        ## modes: w opens text file for wrighting
+##        ##        a opens text file to append at the end of a file
+##        ##        + open text file for read and write
+##        for line in lines:
+##            f.write(line) ## write a string to text file
+##            f.write('\n') ## starts a new line
+##
+##TextFile()
+    
+##def CustomerDetails(name, email, phonenum):
+##    details = ['----------------------------------',
+##               f'Customer Name: {name}',
+##               f'Customer Email: {email}',
+##               f'Customer Phone Number: {phonenum}',
+##               '----------------------------------']
+##    
+##    with open('textfiles/file1.txt', 'a') as f: ## f is an alias
+##        for line in details:
+##            f.write(line)
+##            f.write('\n')
+##
+##CustomerDetails('bob', 'bob@email.com', '01234789789')
+
+def CustomerDetails(name, email, phonenum):
+    details = ['----------------------------------',
+               f'Customer Name: {name}',
+               f'Customer Email: {email}',
+               f'Customer Phone Number: {phonenum}',
+               '----------------------------------',
+               '\n']
+    
+    with open('textfiles/file1.txt', 'a') as f: ## f is an alias
+        f.write('\n'.join(details))
+
+CustomerDetails('john', 'john@email.com', '01234789789')
 
 
 
@@ -238,5 +336,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
