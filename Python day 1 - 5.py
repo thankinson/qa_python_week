@@ -287,6 +287,9 @@
 #################################################
 #################################################
 
+######################################
+##          text editing            ##
+######################################
 
 ##def TextFile():
 ##    lines =['Hello World', 'This is a test']
@@ -314,28 +317,53 @@
 ##
 ##CustomerDetails('bob', 'bob@email.com', '01234789789')
 
-def CustomerDetails(name, email, phonenum):
-    details = ['----------------------------------',
-               f'Customer Name: {name}',
-               f'Customer Email: {email}',
-               f'Customer Phone Number: {phonenum}',
-               '----------------------------------',
-               '\n']
-    
-    with open('textfiles/file1.txt', 'a') as f: ## f is an alias
-        f.write('\n'.join(details))
-
-CustomerDetails('john', 'john@email.com', '01234789789')
-
-
-
+##def CustomerDetails(name, email, phonenum):
+##    details = ['----------------------------------',
+##               f'Customer Name: {name}',
+##               f'Customer Email: {email}',
+##               f'Customer Phone Number: {phonenum}',
+##               '----------------------------------',
+##               '\n']
+##    
+##    with open('textfiles/file1.txt', 'a') as f: ## f is an alias
+##        f.write('\n'.join(details))
+##
+##CustomerDetails('john', 'john@email.com', '01234789789')
+##
 
 
+import os
 
+cwd = os.getcwd()
+print(cwd)
+##os.chdir('C:/')
+##cwd = os.getcwd()
+##print(cwd)
 
+##dir = os.path.join('C:/Users/Admin/Documents/folder5/folder6')
+##print(dir)
+##
+##if not os.path.exists(dir):
+##    os.mkdir(dir)
 
+##cwd = os.getcwd()
+##print(cwd)
 
+##dir = os.path.join('folder2/folder3')
+##print(dir)
+##
+##if not os.path.exists(dir):
+##    os.makedirs(dir)
 
+def newDir(dirPath):
+    dir = os.path.join(f'{dirPath}')
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+
+##def newDirs(dirPath):
+##    os.chdir(f'{dirPath}')
+##    dir = os.path.join(f'{dirName}')
+##    if not os.path.exists(dir)
 
 
 
