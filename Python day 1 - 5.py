@@ -207,7 +207,8 @@
 ##print(TestFunc())
 
 
-##
+## my version ##
+
 ##def StudentScore(name, homeWork, assessment, finalExam):
 ##
 ##    totalScore = homeWork + assessment + finalExam ## this adds all the scores together
@@ -228,6 +229,49 @@
 ##
 ##print(StudentScore("Steve", 25, 50, 90))
 ##
+
+##def OverallScore(box1, box2, box3):
+##    total = box1 + box2 +box3
+##    return total/175
+##
+##def Percentage(decimalNumber):
+##    MultBy100 = decimalNumber * 100
+##    ToNearestPercent = round(MultBy100)
+##    return ToNearestPercent
+##
+##def StringWithPercentageSymbol(Number):
+##    NumberAsString = str(Number)
+##    return NumberAsString + "%"
+##
+##def WorkOutGrade(Decimal):
+##    if Decimal >= 0.85:
+##        return "A"
+##    elif Decimal >= 0.65:
+##        return "C"
+##    else:
+##        return "F"
+##
+##homework = input("Please enter your homework score (/25): ")
+##assessment = input("Polease enter your assessment score (/50): ")
+##final = input("Please enter your final exam score (/100): ")
+##
+##homeworkFloat = float(homework)
+##assessmentFloat = float(assessment)
+##finalFloat = float(final)
+##
+##OverallDecimalScroe = OverallScore(homeworkFloat, assessmentFloat, finalFloat)
+##OverallPercentageScroe = Percentage(OverallDecimalScroe)
+##Result = StringWithPercentageSymbol(OverallPercentageScroe)
+##
+##print(f'Your overall percentage is: {Result}')
+##
+##grade = WorkOutGrade(OverallDecimalScroe)
+##
+##print(f'And your overall grade is: {grade}')
+##
+
+
+
 
             ##############
             ## Moduals  ##
@@ -332,10 +376,10 @@
 ##
 
 
-import os
-
-cwd = os.getcwd()
-print(cwd)
+##import os
+##
+##cwd = os.getcwd()
+##print(cwd)
 ##os.chdir('C:/')
 ##cwd = os.getcwd()
 ##print(cwd)
@@ -355,16 +399,210 @@ print(cwd)
 ##if not os.path.exists(dir):
 ##    os.makedirs(dir)
 
-def newDir(dirPath):
-    dir = os.path.join(f'{dirPath}')
-    if not os.path.exists(dir):
-        os.mkdir(dir)
+##def newDir(dirPath):
+##    dir = os.path.join(f'{dirPath}')
+##    if not os.path.exists(dir):
+##        os.mkdir(dir)
 
 ##def newDirs(dirPath):
 ##    os.chdir(f'{dirPath}')
 ##    dir = os.path.join(f'{dirName}')
 ##    if not os.path.exists(dir)
 
+######################################
+##          decorators              ##
+######################################
+
+##def case(func, string):
+##    return func(string)
+##
+##print(case(str.upper, "Hello World"))
+##print(case(str.lower, "LOREM IPSUM"))
+
+
+
+
+##def my_first_decorator(func):
+##    def wrapper(name):
+##        print("This is some new functionality!!")
+##        return func(name)
+##
+##    return wrapper
+##
+##def greet(name):
+##    return f"Hello, {name}!"
+##
+##greet = my_first_decorator(greet)
+##print(greet("bob smith"))
+
+
+##def func1(func):
+##    print("this is a test")
+##    print(func())
+##    print("End of test")
+##
+##def func2(num1, num2):
+##    return num1 + num2
+##
+##testFunc = func1(func2)
+##print(testFunc(10, 20))
+
+###### get your head around this tom!!!!!  ====^^^^^^ #######
+
+#################################################
+#################################################
+#                                               #
+#                                               #
+#                   DAY 4                       #
+#                                               #
+#                                               #
+#################################################
+#################################################
+
+
+######################################
+##                Class             ##
+######################################
+
+
+##
+##class Dog:
+##    energy = "high"
+##
+##    def speak(self):
+##        print("woof")
+##
+##bilbo_waggins = Dog()
+##
+##print(bilbo_waggins.energy)
+##bilbo_waggins.speak()
+##
+##chewbarka = Dog()
+##chewbarka.energy = "low"
+##
+##print(chewbarka.energy)
+##chewbarka.speak()
+
+##class Dog:
+##    def __init__(self, name, breed, energy):
+##        self.name = name
+##        self.breed= breed
+##        self.energy = energy
+##
+##dog1 = Dog("Bob", "Poop Monster", "High")
+##print(dog1.name)
+
+##class Student:
+##    def __init__(self, name, age):
+##        self.name = name
+##        self.age = age
+##
+##John = Student("John", "21")
+##Jane = Student("Jane", "22")
+##
+##print(getattr(John, "name"))
+##print(getattr(John, "age"))
+
+##class Student:
+##    def __init__(self, name, age, _class="Student"):
+##        self.name = name
+##        self.age = age
+##        self._class = _class
+##
+##    def testAve(self, score1, score2, score3):
+##        totalScore = score1 + score2 + score3
+##        finalScore = totalScore / 175 * 100
+##        if finalScore >= 60 and finalScore < 80:
+##            grade = "pass"
+##        elif finalScore >= 80 and finalScore < 90:
+##            grade = "merit"
+##        elif finalScore >= 90:
+##            grade = "Distiction"
+##        else:
+##            grade = "failed"
+##        return f'{self.name} Scored {round(finalScore)}% overall grade {grade}'
+##        #####             end of class             #####
+##
+##John = Student("John", "21")
+##testResults = John.testAve(25, 45, 90)
+##print(testResults)
+##print(getattr(John, "_class"))
+
+
+
+######################################
+##               oop                ##
+######################################
+
+
+
+
+
+##class Animal:
+##    babies = 0
+##
+##    def reproduce(self):
+##        self.babies += 1
+##
+##class Dog(Animal):
+##    def reproduce(self):
+##        self.babies += 6
+##
+##john = Dog()
+##john.reproduce()
+##print(john.babies)
+
+from abc import ABC, abstractmethod
+
+class Bird(ABC):
+    fly = True
+    babies = 0
+
+    def noise(self):
+        return "Squawk"
+
+    def reproduce(self):
+        self.babies +=1
+
+    @abstractmethod
+    def eat(self):
+        pass
+
+    extinct = False
+
+class Owl(Bird):
+
+    def reproduce(self):
+        self.babies += 6
+
+    def eat(self):
+        return "Peck Peck"
+
+class Dodo(Bird):
+    Fly = False
+    extinct = True
+
+    def eat(self):
+        return "Nom Nom"
+
+    def reproduce(self):
+        if not self.extinct:
+            self.babies +=1
+
+
+owlbert = Owl()
+print(owlbert.eat())
+
+dummy = Dodo()
+print(dummy.eat())
+print(dummy.reproduce())
+
+##animal = input("Chose an animal. Owl or Dodo: ")
+##animalName = input("What is your pets name: ")
+##animalActions = input("What is the animal doing?: ")
+##
+##animalName = animal()
+##print(animalName.animalActions())
 
 
 
@@ -399,6 +637,10 @@ def newDir(dirPath):
 
 
 
-    
+
+
+
+
+
 
 
